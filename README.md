@@ -46,13 +46,13 @@ Trabalho Algoritmo Genético – Caixeiro Viajante
 2.	Pseudo-Algoritmo: 
 - Calcula a distância euclidiana
 - Seleciona a população inicial
-- * Roda a função objetiva (Calculo de aptidão)
+- 3 Roda a função objetiva (Calculo de aptidão)
 - Monta a roleta
 - Seleciona os 50 novos elementos da população com base na roleta
 - Seleciona os pares
 - Faz o crossover
 - Verifica se existe mutação
-- Altera a população e volta para o *
+- Altera a população e volta para o 3
 
 3.	O código é composto por 5 funções:
 - Caixeiro: Função principal que chama as demais e onde foi implementada a rotina de cruzamento e mutação. Retorna uma lista com os seguintes resultados:
