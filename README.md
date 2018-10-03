@@ -56,14 +56,22 @@ Trabalho Algoritmo Genético – Caixeiro Viajante
 
 3.	O código é composto por 5 funções:
 - Caixeiro: Função principal que chama as demais e onde foi implementada a rotina de cruzamento e mutação. Retorna uma lista com os seguintes resultados:
-	menoresCaminhos = Lista com os 1000 melhores caminhos gerados
-	pesosMenoresCaminhos = Lista com os pesos correspondentes a cada menor caminho
-	menorCaminhoGeral = Array com a sequência das cidades do menor caminho geral, dentre os 1000
-	pesoMenorCaminhoGeral = Peso do menor caminho geral
-	primeiroCaminho = Array com a sequência das cidades do primeiro  menor caminho.
-	pesoPrimeiroCaminho = Peso do primeiro menor caminho
-	ultimoCaminho = Array com a sequência das cidades do último  menor caminho.
-	pesoUltimoCaminho = Peso do primeiro menor caminho
+
+	* menoresCaminhos = Lista com os 1000 melhores caminhos gerados
+
+	* pesosMenoresCaminhos = Lista com os pesos correspondentes a cada menor caminho
+
+	* menorCaminhoGeral = Array com a sequência das cidades do menor caminho geral, dentre os 1000
+
+	* pesoMenorCaminhoGeral = Peso do menor caminho geral
+
+	* primeiroCaminho = Array com a sequência das cidades do primeiro  menor caminho.
+
+	* pesoPrimeiroCaminho = Peso do primeiro menor caminho
+
+	* ultimoCaminho = Array com a sequência das cidades do último  menor caminho.
+
+	* pesoUltimoCaminho = Peso do primeiro menor caminho
 
 - CalcularPesos: Função que recebe os dois datasets e calcula os pesos de cada cidade para todas as outras e retorna uma lista
 
@@ -74,27 +82,35 @@ Trabalho Algoritmo Genético – Caixeiro Viajante
 - CalcularRoleta: Recebe as aptidões e retorna um array com a aptidão acumulada.
 
 - OBS: 
-	As cidades foram representadas de 1 a 100 na ordem que foi sendo lido os arquivos com as coordenadas
-	Foi utilizado o algoritmo Order Operator para cruzamento 
-	Taxa de 0.05 para mutação.
+	* As cidades foram representadas de 1 a 100 na ordem que foi sendo lido os arquivos com as coordenadas
+	* Foi utilizado o algoritmo Order Operator para cruzamento
+	* Taxa de 0.05 para mutação.
 
 4.	Passo a passo:
 - Carrega o arquivo com as funções: 
-	source("C:\\Caminho até o arquivo\\caixeiroViajanteAG.r")
 
-- Carrega os arquivo de dados
-	datasetX = read.table("C:\\Caminho até o arquivo\\ coordenadasx.dat")
-	datasetY = read.table("C:\\Caminho até o arquivo\\ coordenadasy.dat")
+	* source("C:\\Caminho até o arquivo\\caixeiroViajanteAG.r")
+
+- Carrega os arquivo de dados:
+
+	* datasetX = read.table("C:\\Caminho até o arquivo\\ coordenadasx.dat")
+
+	* datasetY = read.table("C:\\Caminho até o arquivo\\ coordenadasy.dat")
 
 - Chama a função caixeiro e passa as variáveis onde carregou os dados por parâmetro:
+
 	resultado = caixeiro(datasetX, datasetY)
+
 	Um gráfico com o histórico dos pesos dos melhores caminhos pode ser plotado com o comando: plot(resultado$pesosMenoresCaminhos)
  
-                                        <img src="http://i65.tinypic.com/2w4xtv9.png"/>
+<img src="http://i65.tinypic.com/2w4xtv9.png"/>
 
 	Para saber o caminho da rodada 1000: resultado$ultimoCaminho
+
 	Para saber o peso da rodada 1000: resultado$pesoUltimoCaminho
+
 	Para saber o menor caminho geral: resultado$menorCaminhoGeral
+
 	Para saber o peso do menor caminho geral: resultado$pesoMenorCaminhoGeral
 
 
